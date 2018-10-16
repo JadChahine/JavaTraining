@@ -8,7 +8,7 @@ public class ReverseNumber {
 	 * @param args
 	 */
 	public static void main(String args[]){
-		Integer reverseInteger = reverseNumber(1251);
+		Integer reverseInteger = reverseNumber(+-1126087180);
 		System.out.println(reverseInteger);
 		
 		Double reverseDouble = reverseDouble(85.63);
@@ -20,18 +20,18 @@ public class ReverseNumber {
 	 * @param number
 	 * @return
 	 */
-	public static int reverseNumber(int number) {
+	public static int reverseNumber(int x) {
 		String sign = "+";
 		
-		String numberString = String.valueOf(number);
+		String numberString = String.valueOf(x);
 		
 		if(numberString.contains("-")){
 			sign = "-";
 		}
 		
-		number = Integer.parseInt(numberString.replace("+", "").replace("-", ""));
+		x = Integer.parseInt(numberString.replace("+", "").replace("-", ""));
 		
-		int reverse = reverseInt(number);
+		int reverse = reverseInt(x);
 		
 		reverse = Integer.parseInt(sign + String.valueOf(reverse));
 		
@@ -80,4 +80,5 @@ public class ReverseNumber {
 		return reverse;
 	}
 
+    
 }
