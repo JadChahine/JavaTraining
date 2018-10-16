@@ -1,10 +1,10 @@
-package com.morphean.test;
+package com.training.test;
 
 import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-import com.morphean.reverse.ReverseArray;
+import com.training.reverse.ReverseArray;
 
 public class ReverseArrayTest {
 

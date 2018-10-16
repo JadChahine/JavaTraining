@@ -1,4 +1,4 @@
-package com.morphean.reverse;
+package com.training.reverse;
 
 public class ReverseNumber {
 	
