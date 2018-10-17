@@ -10,7 +10,7 @@ public class ReverseNumberTest {
 
 	@Test
 	public void testReverseInteger() {
-		assertEquals(ReverseNumber.reverseNumber(1250), 521);
+		assertEquals(ReverseNumber.reverseNumber(-1250), -521);
 	}
 	
 	@Test

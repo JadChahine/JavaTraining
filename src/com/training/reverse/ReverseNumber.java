@@ -38,6 +38,7 @@ public class ReverseNumber {
 		return reverse;
     }
 	
+	
 	/**
 	 * 
 	 * @param number
@@ -71,14 +72,37 @@ public class ReverseNumber {
 	private static int reverseInt(int number){
 		int reminder = 0, reverse = 0;
 		
-		while(number > 0){
+		while(number != 0){
 			reminder = number % 10; 
+			
 			reverse = reverse * 10 + reminder;
+			
 			number = number / 10; 
 		}
 		
 		return reverse;
 	}
+	
 
+	public int reverse(int number) {
+		int reminder = 0, reverse = 0;
+
+	    while(number != 0) {
+	    	reminder = number % 10;
+	    	
+	        int y = reverse * 10 + reminder;
+
+	        if ( (y - reminder)/10 != reverse){
+	        	return 0;
+	        }
+	        else{
+	        	reverse = y;
+	        }
+
+	        number = number/10;   
+	    }
+	    
+	    return reverse;
+	}
     
 }

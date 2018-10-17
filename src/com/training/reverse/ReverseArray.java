@@ -1,7 +1,5 @@
 package com.training.reverse;
 
-import java.util.Arrays;
-
 public class ReverseArray {
 
 	public static void main(String [] args){
@@ -27,9 +25,10 @@ public class ReverseArray {
 	public static void printArray(int[] arr){
 		//Arrays.asList(arr).forEach(System.out::println);
 		
-		for( int i = 0 ; i < arr.length ; i++){
-			System.out.print(arr[i] + " ");
+		for(int arrItem : arr){
+			System.out.print(arrItem + " ");
 		}
+		
 		System.out.println();
 	}
 	
