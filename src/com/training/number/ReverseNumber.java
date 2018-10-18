@@ -1,25 +1,9 @@
-package com.training.reverse;
+package com.training.number;
 
 public class ReverseNumber {
 	
-
-	/**
-	 * 
-	 * @param args
-	 */
-	public static void main(String args[]){
-		Integer reverseInteger = reverseNumber(+-1126087180);
-		System.out.println(reverseInteger);
-		
-		Double reverseDouble = reverseDouble(85.63);
-		System.out.println(reverseDouble);
-	}
+	//Public Methods
 	
-	/**
-	 * 
-	 * @param number
-	 * @return
-	 */
 	public static int reverseNumber(int x) {
 		String sign = "+";
 		
@@ -38,12 +22,35 @@ public class ReverseNumber {
 		return reverse;
     }
 	
+	public static int reverseNumber2(int number) {
+		int reminder = 0, reverse = 0;
+
+	    while(number != 0) {
+	    	reminder = number % 10;
+	    	
+	        int y = reverse * 10 + reminder;
+
+	        if ( (y - reminder)/10 != reverse){
+	        	return 0;
+	        }
+	        else{
+	        	reverse = y;
+	        }
+
+	        number = number/10;   
+	    }
+	    
+	    return reverse;
+	}
 	
-	/**
-	 * 
-	 * @param number
-	 * @return
-	 */
+	public static int reverseNumber3(int number){
+		StringBuilder numberString = new StringBuilder(number);
+		
+		String reverseNumberString = numberString.reverse().toString();
+	
+		return Integer.parseInt(reverseNumberString);
+	}
+	
 	public static double reverseDouble(double number){
 		
 		String numberString = String.valueOf(number);
@@ -58,6 +65,8 @@ public class ReverseNumber {
 		
 		return Double.valueOf(suffixReverse + "." + prefixReverse);
 	}
+	
+	//Private Methods
 	
 	/**
 	 * The Algorithm
@@ -84,25 +93,6 @@ public class ReverseNumber {
 	}
 	
 
-	public int reverse(int number) {
-		int reminder = 0, reverse = 0;
-
-	    while(number != 0) {
-	    	reminder = number % 10;
-	    	
-	        int y = reverse * 10 + reminder;
-
-	        if ( (y - reminder)/10 != reverse){
-	        	return 0;
-	        }
-	        else{
-	        	reverse = y;
-	        }
-
-	        number = number/10;   
-	    }
-	    
-	    return reverse;
-	}
+	
     
 }

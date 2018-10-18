@@ -4,9 +4,9 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-import com.training.reverse.ReverseNumber;
+import com.training.number.ReverseNumber;
 
-public class ReverseNumberTest {
+public class NumberTrainingTest {
 
 	@Test
 	public void testReverseInteger() {

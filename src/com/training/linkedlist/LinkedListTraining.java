@@ -2,45 +2,29 @@ package com.training.linkedlist;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.LinkedList;
 import java.util.List;
 import java.util.stream.Collectors;
 
-
-
 public class LinkedListTraining {
 
-	public static void main(String[] args) {
+	// Public Methods
 
-		ListNode lst1n1 = new ListNode(2);
-		ListNode lst1n2 = new ListNode(4);
-		ListNode lst1n3 = new ListNode(3);
-		
-		lst1n1.next = lst1n2;
-		lst1n2.next = lst1n3;
-		lst1n3.next = null;
-		
-		ListNode lst2n1 = new ListNode(5);
-		ListNode lst2n2 = new ListNode(6);
-		ListNode lst2n3 = new ListNode(4);
-		
-		lst2n1.next = lst2n2;
-		lst2n2.next = lst2n3;
-		lst2n3.next = null;
-		
-		new LinkedListTraining().addTwoNumbers(lst1n1, lst2n1);
-		
-	}
-
+	/**
+	 * 
+	 * @param l1
+	 * @param l2
+	 * @return
+	 */
 	public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
 		String nb1 = getLinkedListReverseNumber(l1);
 		String nb2 = getLinkedListReverseNumber(l2);
 
 		Double result = Double.parseDouble(nb1) + Double.parseDouble(nb2);
-		
-		return constructListNode(result.toString());
+
+		return constructListNode(String.format("%.10f", result));
 	}
 
+	// Private Methods
 	private String getLinkedListReverseNumber(ListNode listNode) {
 		List<Integer> lst = new ArrayList<>();
 
@@ -49,8 +33,9 @@ public class LinkedListTraining {
 
 			listNode = listNode.next;
 		}
-		while (listNode != null);
-			
+		while (listNode != null)
+			;
+
 		Collections.reverse(lst);
 
 		return lst.stream().map(item -> item.toString()).collect(Collectors.joining());
@@ -58,9 +43,9 @@ public class LinkedListTraining {
 
 	private ListNode constructListNode(String nbString) {
 		System.out.println("nbString : " + nbString);
-		
+
 		nbString = nbString.split("\\.")[0];
-		
+
 		ListNode nodeStart = null;
 		ListNode node = null;
 		ListNode previousNode = null;
@@ -84,30 +69,32 @@ public class LinkedListTraining {
 
 		node.next = null;
 
-		//printListNode(nodeStart);
-		
 		return nodeStart;
 	}
 
-	 static public class ListNode {
-		public int val;
-		public ListNode next;
+	static public class ListNode {
+		private int val;
+		private ListNode next;
+
+		public int getVal() {
+			return val;
+		}
+
+		public void setVal(int val) {
+			this.val = val;
+		}
+
+		public ListNode getNext() {
+			return next;
+		}
+
+		public void setNext(ListNode next) {
+			this.next = next;
+		}
 
 		public ListNode(int x) {
-			val = x;
+			this.val = x;
 		}
 	}
-	
-	
-	/*
-	private static void printListNode(ListNode listNode){
-		do{
-			System.out.print(listNode.val + " ");
-			listNode = listNode.next;
-		}
-		while(listNode != null);
-		System.out.println();
-	}
-	*/
 
 }

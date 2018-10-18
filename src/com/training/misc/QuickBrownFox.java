@@ -1,4 +1,4 @@
-package com.training.quickBrownFox;
+package com.training.misc;
 
 import java.util.Map;
 import java.util.TreeMap;
@@ -28,9 +28,6 @@ public class QuickBrownFox {
     	}
     	
     	map.values().forEach(System.out::print);
-    	
-    	//List<Integer> lstKeys = new ArrayList<Integer> ( map.keySet() );
-    	//Collections.sort(lstKeys);
     }
     
     
