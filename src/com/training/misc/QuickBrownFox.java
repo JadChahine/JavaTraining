@@ -17,19 +17,19 @@ public class QuickBrownFox {
     	
     	Map<Integer, String> map = new TreeMap<>();
     	
-    	for(int x = 0 ; x < words1.length ; x++){
-    		String[] parts = words1[x].split(":");
-    		map.put(Integer.parseInt(parts[0].trim()), parts[1].trim() + " ");
-    	}
+    	fillMapFromArray(words1, map);
     	
-    	for(int x = 0 ; x < words2.length ; x++){
-    		String[] parts = words2[x].split(":");
-    		map.put(Integer.parseInt(parts[0].trim()), parts[1].trim() + " ");
-    	}
+    	fillMapFromArray(words2, map);
     	
     	map.values().forEach(System.out::print);
     }
     
+    private static void fillMapFromArray(String [] words, Map<Integer, String> map){
+    	for(int x = 0 ; x < words.length ; x++){
+    		String[] parts = words[x].split(":");
+    		map.put(Integer.parseInt(parts[0].trim()), parts[1].trim() + " ");
+    	}
+    }
     
     public static void main(String [] args){
     	printSentence();
