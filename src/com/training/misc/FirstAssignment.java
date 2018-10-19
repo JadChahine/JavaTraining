@@ -39,25 +39,25 @@ public class FirstAssignment {
 		
 	}
 	
-	public static Map<Integer, String> printNumbersUsingMap(int upperRange){
+	public static Map<Integer, String> fillNumbersUsingMap(int upperRange){
 		Map<Integer, String> map = new HashMap<>();
 		
+		String stringToPrint = null;
+		
 		for(int i = 1 ; i <= upperRange; i++){
-			
-			if(i % 3 == 0){
-				map.put(i, "Bat");
-			}
-			else if(i % 5 == 0){
-				map.put(i, "Man");
-			}
-			else{
-				map.put(i, String.valueOf(i));
-			}
+			stringToPrint = String.valueOf(i);
 			
 			if(i % 3 == 0 && i % 5 == 0){
-				map.put(i, "BatMan");
+				stringToPrint = "BatMan";
+			}
+			if(i % 3 == 0){
+				stringToPrint = "Bat";
+			}
+			else if(i % 5 == 0){
+				stringToPrint = "Man";
 			}
 			
+			map.put(i, stringToPrint);
 		}
 		
 		return map;

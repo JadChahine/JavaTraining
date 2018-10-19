@@ -1,12 +1,9 @@
 package com.training.test;
 
 import static org.junit.Assert.*;
-
 import java.util.Map;
 import java.util.Scanner;
-
 import org.junit.Test;
-
 import com.training.misc.FirstAssignment;
 
 public class FirstAssignmentTest {
@@ -20,7 +17,7 @@ public class FirstAssignmentTest {
 		
 		//Exercice.printNumbers(upperRange);
 		
-		Map<Integer, String> map = FirstAssignment.printNumbersUsingMap(upperRange);
+		Map<Integer, String> map = FirstAssignment.fillNumbersUsingMap(upperRange);
 		
 		for (Map.Entry<Integer, String> mapEntry : map.entrySet()) {
 			System.out.print(mapEntry.getValue().concat(" "));
