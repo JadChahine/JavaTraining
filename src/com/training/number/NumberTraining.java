@@ -1,6 +1,6 @@
 package com.training.number;
 
-public class ReverseNumber {
+public class NumberTraining {
 	
 	//Public Methods
 	

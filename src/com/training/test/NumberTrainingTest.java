@@ -4,18 +4,18 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-import com.training.number.ReverseNumber;
+import com.training.number.NumberTraining;
 
 public class NumberTrainingTest {
 
 	@Test
 	public void testReverseInteger() {
-		assertEquals(ReverseNumber.reverseNumber(-1250), -521);
+		assertEquals(NumberTraining.reverseNumber(-1250), -521);
 	}
 	
 	@Test
 	public void testReverseDouble() {
-		assertEquals(ReverseNumber.reverseDouble(85.63), 36.58, 2);
+		assertEquals(NumberTraining.reverseDouble(85.63), 36.58, 2);
 	}
 
 }

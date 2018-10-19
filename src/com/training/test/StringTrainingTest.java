@@ -16,9 +16,14 @@ public class StringTrainingTest {
 		System.out.println("Reverse => '" + reverse + "'");
 		assertEquals(expectedString, reverse);
 		
-		String reverseJava8 = StringTraining.reverseStringJava8(stringToReverse);
-		System.out.println("Reverse in Java 8 => '" + reverseJava8 + "'");
-		assertEquals(expectedString, reverseJava8);
+		String reverseUsingList = StringTraining.reverseStringUsingList(stringToReverse);
+		System.out.println("Reverse using List => '" + reverseUsingList + "'");
+		assertEquals(expectedString, reverseUsingList);
+		
+		String reverseUsingStringBuffer = StringTraining.reverseStringUsingStringBuffer(stringToReverse);
+		System.out.println("Reverse using StringBuffer => '" + reverseUsingStringBuffer + "'");
+		assertEquals(expectedString, reverseUsingStringBuffer);
+		
 	}
 
 }

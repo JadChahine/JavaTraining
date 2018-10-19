@@ -22,11 +22,23 @@ public class QuickBrownFox {
     	fillMapFromArray(words2, map);
     	
     	map.values().forEach(System.out::print);
+    	
+    	/*
+    	String sentence = "";
+    	
+    	map.values().forEach(item -> {
+    		sentence.concat(item);
+    	});
+    	
+    	System.out.print(sentence.trim() + ".");
+    	(
+    	*/
+    	
     }
     
     private static void fillMapFromArray(String [] words, Map<Integer, String> map){
-    	for(int x = 0 ; x < words.length ; x++){
-    		String[] parts = words[x].split(":");
+    	for(String item : words){
+    		String[] parts = item.split(":");
     		map.put(Integer.parseInt(parts[0].trim()), parts[1].trim() + " ");
     	}
     }
