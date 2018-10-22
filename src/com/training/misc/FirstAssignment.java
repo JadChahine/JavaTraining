@@ -50,7 +50,7 @@ public class FirstAssignment {
 			if(i % 3 == 0 && i % 5 == 0){
 				stringToPrint = "BatMan";
 			}
-			if(i % 3 == 0){
+			else if(i % 3 == 0){
 				stringToPrint = "Bat";
 			}
 			else if(i % 5 == 0){
